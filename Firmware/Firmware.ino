@@ -1,9 +1,4 @@
 #include "Global.h"
-#define KnocksSequenceMaxLength 10
-
-int knockSequence[KnocksSequenceMaxLength];
-int tempKnockSequence[KnocksSequenceMaxLength];
-int knocksSequenceLength  = 0;
 
 void setup() 
 {
@@ -16,7 +11,7 @@ void setup()
 
 void loop() 
 {	
-	int sample = piezo.read();
+  int sample = piezo.read();
 	if(sample > 10) //if sample above thershold
 	{
 			Serial.println("Piezo detect something, change LED");
@@ -26,5 +21,5 @@ void loop()
 			delay(500);
 			led.setRGB(0,0,255);     
 	}
-	delay(100);
+ delay(100);
 }
